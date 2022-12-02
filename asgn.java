@@ -1,9 +1,11 @@
+
 import java.util.*;
 
-public class asgn {
+public class Main {
     public static void main(String[] args) {
         Scanner s = new Scanner(System.in);
         System.out.println("welcome to expo2020");
+        // enter user details
         System.out.println("Pls enter number of ppl to enter");
         int n, age;
         String name;
@@ -21,6 +23,7 @@ public class asgn {
             System.out.println(Age[i]);
         }
 
+        //date and time selection
         System.out.println("enter month of entry");
         int month = s.nextInt();
         System.out.println("enter date of entry");
@@ -29,8 +32,12 @@ public class asgn {
         int hour = s.nextInt();
         // System.out.println("the population @expo2020: "+population.getPopulation(month, date, hour));
 
-        System.out.println("which district? ");
-        //use iterator to display districts stored in linkedlists
+        System.out.println("which district would you like to enter first? ");
+        String dist = s.nextLine();
+
+        district d= new district();
+        d.dists();
+        //use iterator to display districts stored in linkedlists, which is to be initiated in another class
 
         // if district sustainability: parking A-c
         // if district mobility/jubilee: parking D-F
