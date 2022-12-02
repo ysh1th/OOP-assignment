@@ -33,7 +33,8 @@ public class Main {
         // System.out.println("the population @expo2020: "+population.getPopulation(month, date, hour));
 
         System.out.println("which district would you like to enter first? ");
-        district d= new district();
+        //use iterator to display districts stored in linkedlists, which is to be initiated in another class
+        district d= new district(); // object created for district class
         d.dists();
         String garbageScan1 = s.nextLine();
         String selectDist = s.nextLine();
@@ -45,7 +46,6 @@ public class Main {
 
 
 
-        //use iterator to display districts stored in linkedlists, which is to be initiated in another class
 
         // if district sustainability: parking A-c
         // if district mobility/jubilee: parking D-F
