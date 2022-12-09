@@ -1,0 +1,99 @@
+package distpav;
+
+import java.util.*;
+public class distpav {
+    public String district;
+    public distpav(){}
+
+    public distpav(String currentDist){
+        currentDist = currentDist;
+    } //constructor overriding
+
+    public void districts() {
+        LinkedList<String> ll1 = new LinkedList<String>();
+        ll1.add("opportunity");
+        ll1.add("sustainability");
+        ll1.add("mobility");
+        ll1.add("al forsan");
+        ll1.add("jubilee");
+        ll1.add("al wasl");
+
+        {
+
+            for (int i = 0; i<ll1.size()-1; i++) {
+                System.out.println(ll1.get(i) + " ");
+            }
+            System.out.println("Or direct to "+ll1.get(5));
+        }
+    }
+
+    public void pavilions(String currentDist) {
+        switch (currentDist){
+            case "sustainability":
+                LinkedList<String> lls = new LinkedList<String>();
+                lls.add("Brazil");
+                lls.add("Singapore");
+                lls.add("Campus Germany");
+
+                for (String ll : lls) {
+                    System.out.println(ll + " ");
+                }
+                break;
+//                System.out.println("Or direct to exit?");
+
+            case "opportunity":
+                LinkedList<String> llo = new LinkedList<String>();
+                llo.add("Saudi Arabia");
+                llo.add("UK");
+                llo.add("China");
+
+                for (String element : llo) {
+                    System.out.println(element + " ");
+                }
+                break;
+
+
+            case "mobility":
+                LinkedList<String> llm = new LinkedList<String>();
+                llm.add("South Korea");
+                llm.add("Jamaica");
+                llm.add("France");
+
+                for (String item : llm) {
+                    System.out.println(item + " ");
+                }
+                break;
+
+
+
+            case "alforsan":
+                LinkedList<String> llf = new LinkedList<String>();
+                llf.add("India");
+                llf.add("UAE");
+                llf.add("Japan");
+
+                for (String value : llf) {
+                    System.out.println(value + " ");
+                }
+                break;
+
+
+            case "jubilee":
+                LinkedList<String> llj = new LinkedList<String>();
+                llj.add("Argentina");
+                llj.add("Portugal");
+                llj.add("Canada");
+                llj.add("p");
+                llj.add("p");
+                for (String s : llj) {
+                    System.out.println(s + " ");
+                }
+                break;
+
+        }
+
+
+
+    }
+
+}
