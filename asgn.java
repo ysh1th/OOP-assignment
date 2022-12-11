@@ -1,5 +1,10 @@
 import java.util.*;
+import java.lang.*;
 import distpav.*;
+
+//
+
+import static java.lang.System.exit;
 
 public class asgn {
     public static void main(String[] args) {
@@ -9,32 +14,8 @@ public class asgn {
         System.out.println("Pls enter number of ppl to enter");
         int n = s.nextInt();
 
-        userDetails userdetails = new userDetails(n);
-        userDetails.enterDetails(n);
-//
-//        int n, age;
-//        String name;
-//        String[] Name = new String[n+1];
-//        int[] Age = new int[n+1];
-//        int i;
-//        for(i=1;i<=n;i++) {
-//            System.out.println("enter name"+i);
-//            String garbageScan1 = s.nextLine();
-//            Name[i]=s.nextLine();
-//            System.out.println(Name[i]);
-//            System.out.println("enter age");
-//            Age[i]=s.nextInt();
-//            System.out.println(Age[i]);
-//        }
-
-        //date and time selection
-        System.out.println("enter month of entry");
-        int month = s.nextInt();
-        System.out.println("enter date of entry");
-        int date = s.nextInt();
-        System.out.println("enter hours of entry (10-ss)");
-        int hour = s.nextInt();
-        // System.out.println("the population @expo2020: "+population.getPopulation(month, date, hour));
+        userDetails userdetails = new userDetails();
+        userDetails.enterDetails();
 
         System.out.println("which district would you like to enter first? ");
         //use iterator to display districts stored in linkedlists, which is to be initiated in another class
@@ -44,53 +25,36 @@ public class asgn {
 
         distpav dp = new distpav();
 
-        // for showing districts
-        dp.districts();
+        // for getting districts
+        dp.districts(); //change to askdist
 
-        String garbageScan1 = s.nextLine();
-        String selectDist = s.nextLine();
+        // ********* selects district **********
+//        String garbageScan1 = s.nextLine();
+//        String selectDist = s.nextLine();
+
         // remove lowercases and spaces from the String input
-        String currentDist = selectDist.toLowerCase().replaceAll("\\s+", "");
-//        System.out.println(currentDist);
+//        String currentDist = selectDist.toLowerCase().replaceAll("\\s+", "");
+//        if (currentDist.equals("exit")) {
+//            System.exit(0); //exits code successfully
+//        }
 
-        parking parkng = new parking(currentDist);
-        String currentParking = parkng.allotPark();
-        System.out.println("your parking is "+currentParking);
+        // ********* allots parking ***********
+//        parking parkng = new parking(currentDist);
+//        String currentParking = parkng.allotPark();
+//        System.out.println("your parking is " + currentParking);
 
-        System.out.println(currentDist);
+        // shows chosen districts
+//        System.out.println("your chosen district is " + currentDist);
+
+        System.out.println("choose pavilion to enter\n");
         dp.pavilions(currentDist);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        //call for method in a class to check if currentDist == district
-        // and call for function in that function to display the pavilions
-
-        // store parking
-
-        //***************
-
-
-
-
-
-
-
-        // if district sustainability/ al wasl: parking A-c
-        // if district mobility/jubilee/ al wasl: parking D-F
-        //if district opportunity/ al  forsan/ al wasl: parking g-i
+        String selectPav = s.nextLine();
+        System.out.println(selectPav);
+        String currentPav = selectPav.toLowerCase().replaceAll("\\s+", "");
 
 
     }
+
+    public static void exit(int status){}
+
 }
