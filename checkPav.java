@@ -1,3 +1,5 @@
+package distpav;
+
 import activities.*;
 
 public class checkPav {
@@ -13,7 +15,8 @@ public class checkPav {
             case "sustainability":
                 switch (this.pav) {
                     case "brazil":
-                        // call for another class imported from package
+
+                        // call for inner class imported from package (activities)
                         break;
                     case "Singapore":
 
