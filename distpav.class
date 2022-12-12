@@ -1,4 +1,5 @@
 package distpav;
+import activities.*;
 
 import java.util.*;
 public class distpav {
@@ -6,9 +7,52 @@ public class distpav {
     public distpav(){}
 
     public distpav(String currentDist){
-        currentDist = currentDist;
+        this.district = currentDist;
     } //constructor overriding
+    public void askdist() {
+        Scanner s = new Scanner(System.in);
+        System.out.println("which district would you like to enter first? ");
+        districts();
+//        String garbageScan1 = s.nextLine();
+        String selectDist = s.nextLine();
+        String currentDist = selectDist.toLowerCase().replaceAll("\\s+", "");
+        System.out.println("your chosen district is " + currentDist);
+        if (currentDist.equals("exit")) {
+            System.exit(0); //exits code successfully
+        }
+        askpav(currentDist);
+    }
 
+    public void askpav(String currentDist){
+        Scanner s = new Scanner(System.in);
+        pavilions(currentDist);
+        System.out.println("Choose pavilion to explore activities in "+currentDist+" district");
+        String selectPav = s.nextLine();
+        String currentPav = selectPav.toLowerCase().replaceAll("\\s+", "");
+
+        checkPav pav = new checkPav(currentPav, currentDist);
+        pav.allotAct();
+
+        System.out.println("thank you for visiting "+selectPav);
+        System.out.println("Want to have pavilions view or districts view?\n(enter 0 for pavilions view\nenter any number for district view ");
+        System.out.println("\nOr do you want to exit expo?\n\t(type exit)");
+        String exit = s.nextLine();
+        if (exit.equals("exit")) {
+            System.exit(0); //exits code successfully
+        }
+        int a = s.nextInt();
+        if (a==0){
+            askpav(currentDist);
+        }
+        else {
+            askdist();
+        }
+    }
+
+
+//    public String getDistrict(String currentDist){
+//        return currentDist;
+//    }
     public void districts() {
         LinkedList<String> ll1 = new LinkedList<String>();
         ll1.add("opportunity");
@@ -17,13 +61,13 @@ public class distpav {
         ll1.add("al forsan");
         ll1.add("jubilee");
         ll1.add("al wasl");
+        ll1.add("\tExit from Expo2020 (type exit)");
 
         {
 
-            for (int i = 0; i<ll1.size()-1; i++) {
+            for (int i = 0; i<ll1.size(); i++) {
                 System.out.println(ll1.get(i) + " ");
             }
-            System.out.println("Or direct to "+ll1.get(5));
         }
     }
 
@@ -34,6 +78,7 @@ public class distpav {
                 lls.add("Brazil");
                 lls.add("Singapore");
                 lls.add("Campus Germany");
+                lls.add("\tExit from district");
 
                 for (String ll : lls) {
                     System.out.println(ll + " ");
@@ -46,6 +91,7 @@ public class distpav {
                 llo.add("Saudi Arabia");
                 llo.add("UK");
                 llo.add("China");
+                llo.add("\tExit from district");
 
                 for (String element : llo) {
                     System.out.println(element + " ");
@@ -58,6 +104,7 @@ public class distpav {
                 llm.add("South Korea");
                 llm.add("Jamaica");
                 llm.add("France");
+                llm.add("\tExit from district");
 
                 for (String item : llm) {
                     System.out.println(item + " ");
@@ -71,6 +118,7 @@ public class distpav {
                 llf.add("India");
                 llf.add("UAE");
                 llf.add("Japan");
+                llf.add("\tExit from district");
 
                 for (String value : llf) {
                     System.out.println(value + " ");
@@ -83,13 +131,12 @@ public class distpav {
                 llj.add("Argentina");
                 llj.add("Portugal");
                 llj.add("Canada");
-                llj.add("p");
-                llj.add("p");
+                llj.add("\tExit from district");
+
                 for (String s : llj) {
                     System.out.println(s + " ");
                 }
                 break;
-
         }
 
 
