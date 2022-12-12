@@ -6,9 +6,7 @@ public class userDetails {
 //    userDetails(int ppl) {
 //        this.ppl = ppl;
 //    }
-    public userDetails() {
-
-    }
+    public userDetails(){}
     public static void enterDetails(){
         Scanner s = new Scanner(System.in);
 
@@ -19,11 +17,12 @@ public class userDetails {
 
         for(int i=1;i<=ppl;i++) {
             System.out.println("enter name"+i);
+            String garbageScan1 = s.nextLine();
             Name[i]=s.nextLine();
             System.out.println(Name[i]);
             System.out.println("enter age");
             Age[i]=s.nextInt();
-            String garbageScan1 = s.nextLine();
+            String garbageScan2 = s.nextLine();
             System.out.println(Age[i]);
         }
 
@@ -34,7 +33,6 @@ public class userDetails {
         int date = s.nextInt();
         System.out.println("enter hours of entry (10-22)");
         int hour = s.nextInt();
-        // System.out.println("the population @expo2020: "+population.getPopulation(month, date, hour));
         System.out.println("entering on " + date +"/"+ month + " at " + hour);
     }
 }
