@@ -34,14 +34,13 @@ public class distpav {
         pav.allotAct();
 
         System.out.println("thank you for visiting "+selectPav);
-        System.out.println("Want to have pavilions view or districts view?\n(enter 0 for pavilions view\nenter any number for district view ");
-        System.out.println("\nOr do you want to exit expo?\n\t(type exit)");
-        String exit = s.nextLine();
-        if (exit.equals("exit")) {
+        System.out.println("Want to have pavilions view or districts view?\n(enter 1 for pavilions view\nenter 0 to exit expo\nenter any number for district view ");
+        int a = s.nextInt();
+
+        if (a==0) {
             System.exit(0); //exits code successfully
         }
-        int a = s.nextInt();
-        if (a==0){
+        if (a==1){
             askpav(currentDist);
         }
         else {
