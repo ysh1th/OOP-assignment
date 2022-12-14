@@ -37,7 +37,7 @@ public class checkPav {
 
                         break;
                     case "China":
-
+                        activities.act1 act1 = new activities.act1();
                         break;
 
                 }
