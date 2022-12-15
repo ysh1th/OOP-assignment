@@ -40,7 +40,7 @@ public class distpav {
         if (a==0) {
             System.exit(0); //exits code successfully
         }
-        if (a==1){
+        else if (a==1){
             askpav(currentDist);
         }
         else {
@@ -74,9 +74,9 @@ public class distpav {
         switch (currentDist){
             case "sustainability":
                 LinkedList<String> lls = new LinkedList<String>();
-                lls.add("Brazil");
-                lls.add("Singapore");
-                lls.add("Campus Germany");
+                lls.add("1:Brazil");
+                lls.add("2:Singapore");
+                lls.add("3:Campus Germany");
                 lls.add("\tExit from district");
 
                 for (String ll : lls) {
@@ -87,9 +87,9 @@ public class distpav {
 
             case "opportunity":
                 LinkedList<String> llo = new LinkedList<String>();
-                llo.add("Saudi Arabia");
-                llo.add("UK");
-                llo.add("China");
+                llo.add("1:Saudi Arabia");
+                llo.add("2:UK");
+                llo.add("3:China");
                 llo.add("\tExit from district");
 
                 for (String element : llo) {
@@ -100,9 +100,9 @@ public class distpav {
 
             case "mobility":
                 LinkedList<String> llm = new LinkedList<String>();
-                llm.add("South Korea");
-                llm.add("Jamaica");
-                llm.add("France");
+                llm.add("1:South Korea");
+                llm.add("2:Jamaica");
+                llm.add("3:France");
                 llm.add("\tExit from district");
 
                 for (String item : llm) {
@@ -114,9 +114,9 @@ public class distpav {
 
             case "alforsan":
                 LinkedList<String> llf = new LinkedList<String>();
-                llf.add("India");
-                llf.add("UAE");
-                llf.add("Japan");
+                llf.add("1:India");
+                llf.add("2:UAE");
+                llf.add("3:Japan");
                 llf.add("\tExit from district");
 
                 for (String value : llf) {
@@ -127,19 +127,18 @@ public class distpav {
 
             case "jubilee":
                 LinkedList<String> llj = new LinkedList<String>();
-                llj.add("Argentina");
-                llj.add("Portugal");
-                llj.add("Canada");
+                llj.add("1:Argentina");
+                llj.add("2:Portugal");
+                llj.add("3:Canada");
                 llj.add("\tExit from district");
 
                 for (String s : llj) {
                     System.out.println(s + " ");
                 }
                 break;
+            case "alwasl":
+                break;
+            default:
         }
-
-
-
     }
-
 }
