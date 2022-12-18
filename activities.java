@@ -9,7 +9,7 @@ public class activities {
         int a, b;
 
         void selectVehicle() {
-            System.out.println("Welcome");
+            System.out.println("\nWelcome");
             System.out.println("Lets see how environmentally friendly your vehicle is\n");
             System.out.println("which vehicle type do you have? ");
             System.out.println("\t\t1 - gasoline\n\t\t2 - electric");
@@ -21,6 +21,10 @@ public class activities {
                     break;
                 case 2:
                     display2();
+                    break;
+                default:
+                    System.out.println("Option unavailable\nrestarting activity");
+                    selectVehicle();
             }
         }
 
@@ -37,13 +41,14 @@ public class activities {
         int c;
 
         void show() {
-            System.out.println("********************************************************************************************************");
+            System.out.println("\n********************************************************************************************************");
             System.out.println("\nDid you know?");
             System.out.println("\nCompared to gasoline run and electric run vehicles");
-            System.out.println("which produce " + a + " grams of CO2 per mile and");
-            System.out.println(b + " grams of CO2 per mile");
+            System.out.println("which produce " + a + " grams of CO2 per mile and "+b + " grams of CO2 per mile");
+//            System.out.println(b + " grams of CO2 per mile");
             System.out.println("Hybrid vehicles produce only " + c + " grams of CO2 per mile");
             System.out.println("Making hybrid vehicles the best choice to go sustainable in this country with high vehicle population!!");
+            System.out.println("********************************************************************************************************");
         }
     }
 
@@ -133,8 +138,9 @@ public class activities {
                 } else {
                     throw new InvStudentExc();
                 }
-            } finally {
-                System.out.println("Invalid Student.");
+            }
+            finally {
+                System.out.println("invalid Student.");
                 return;
             }
         }
@@ -152,12 +158,8 @@ public class activities {
         }
 
         static boolean isValidAge(int age) {
-            if (age >= 35 || age <= 0) {
-                return false;
-            }
-            return true;
+            return age < 35 && age > 0;
         }
-
         static boolean isValidYear(int year) {
             int digit;
             while (year != 0) {
@@ -169,7 +171,6 @@ public class activities {
             }
             return true;
         }
-
         static boolean isValidId(String id) {
             if (id.length() != 6) {
                 return false;
@@ -183,9 +184,7 @@ public class activities {
                         return false;
                     }
                 } else if (i >= 1 && i <= 4) {
-                    if (i < 48 || i > 57) {
-                        return false;
-                    }
+                    return false;
                 } else {
                     if (arr[i] != 'U') {
                         return false;
