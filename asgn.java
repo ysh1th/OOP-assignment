@@ -12,7 +12,7 @@ public class asgn {
                 "   \\_/\\_/  |_____|_____\\____\\___/|_|  |_|_____|    |_| \\___/   |_____/_/\\_\\_|    \\___/  |_____|\\___/_____|\\___/ ");
 
         userDetails userdetails = new userDetails();
-        userDetails.enterDetails(); //this will ask for no. of ppl entering and rest all
+        userDetails.enterDetails();
 
         distpav dp = new distpav();
         // for getting districts
