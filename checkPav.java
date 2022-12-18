@@ -1,9 +1,6 @@
 package distpav;
-
 import activities.*;
-
 import java.util.Scanner;
-
 public class checkPav {
     public  String pav;
     public String dist;
@@ -11,16 +8,11 @@ public class checkPav {
         this.pav = currentPav;
         this.dist = currentDist;
     }
-
+    distpav distpav = new distpav();
     public void allotAct(){
-//        activities a0 = new activities();
-//        act1 a1 = a0.act1;
         activities.act1 a = new activities.act1();
         activities.act2 b = new activities.act2();
         activities.act3 c = new activities.act3();
-
-//        activities.act1 a = new activities.act1();
-
         switch (this.dist) {
             case "sustainability":
                 switch (this.pav) {
@@ -31,10 +23,12 @@ public class checkPav {
                     case "singapore", "campusgermany":
                         b.actmethod2();
                         break;
+                    default:
+                        System.out.println("wrong name,\nwatch out for spelling errors ;)");
+                        distpav.askpav(this.dist);
                 }
                 break;
 //                System.out.println("Or direct to exit?");
-
             case "opportunity":
                 switch (this.pav) {
                     case "saudiarabia":
@@ -46,28 +40,23 @@ public class checkPav {
                     case "china":
                         a.actmethod1();
                         break;
-
-//                    default:
-//                        throw new IllegalStateException("Unexpected value: " + this.pav);
+                    default:
+                        System.out.println("wrong name,\nwatch out for spelling errors ;)");
+                        distpav.askpav(this.dist);
                 }
-
                 break;
-
-
             case "mobility":
                 switch (this.pav) {
                     case "southkorea", "france":
                         b.actmethod2();
-
-
                         break;
                     case "jamaica":
                         c.actmethod3();
                         break;
-
-
+                    default:
+                        System.out.println("wrong name,\nwatch out for spelling errors ;)");
+                        distpav.askpav(this.dist);
                 }
-
                 break;
             case "alforsan":
                 switch (this.pav) {
@@ -77,22 +66,23 @@ public class checkPav {
                     case "uae":
                         b.actmethod2();
                         break;
+                    default:
+                        System.out.println("wrong name,\nwatch out for spelling errors ;)");
+                        distpav.askpav(this.dist);
                 }
-
                 break;
-
-
             case "jubilee":
                 switch (this.pav) {
                     case "argentina", "portugal", "canada":
                         b.actmethod2();
                         break;
+                    default:
+                        System.out.println("wrong name,\nwatch out for spelling errors ;)");
+                        distpav.askpav(this.dist);
                 }
-
                 break;
         }
     }
-
 }
 
 
