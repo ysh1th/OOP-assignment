@@ -15,14 +15,14 @@ public class distpav extends harshadon {
     @Override
     public void askdist() {
         Scanner s = new Scanner(System.in);
-        System.out.println("which district would you like to enter? ");
+        System.out.println("\n\nwhich district would you like to enter? \n");
         districts();
 //        String garbageScan1 = s.nextLine();
         String selectDist = s.nextLine();
         String currentDist = selectDist.toLowerCase().replaceAll("\\s+", "");
-        System.out.println("you chose " + currentDist);
+        System.out.println("\n\nyou chose " + currentDist);
         if (currentDist.equals("alwasl")) {
-            System.out.println("...");
+            System.out.println("The beating heart of Expo 2020");
             askdist();
         }
         if (currentDist.equals("exit")) {
@@ -34,7 +34,7 @@ public class distpav extends harshadon {
     public void askpav(String currentDist){
         Scanner s = new Scanner(System.in);
         pavilions(currentDist);
-        System.out.println("Choose pavilion to explore activities in "+currentDist+" district");
+        System.out.println("\nChoose pavilion to explore activities in "+currentDist+" district");
         String selectPav = s.nextLine();
         String currentPav = selectPav.toLowerCase().replaceAll("\\s+", "");
         if (currentPav.equals("exit")) {
@@ -44,8 +44,8 @@ public class distpav extends harshadon {
         checkPav pav = new checkPav(currentPav, currentDist);
         pav.allotAct();
 
-        System.out.println("thank you for visiting "+selectPav);
-        System.out.println("Want to have pavilions view or districts view?\n(enter 1 for pavilions view\nenter 0 to exit expo\nenter any number for district view ");
+        System.out.println("\n\nthank you for visiting "+selectPav);
+        System.out.println("\n\nWant to have pavilions view or districts view?\n\t- For pavilions view: enter 1\n\t- To exit expo: enter 0\n\t- For district view: enter any number other than 0 and 1 ");
         int a = s.nextInt();
 
         if (a==0) {
@@ -174,8 +174,6 @@ public class distpav extends harshadon {
                 for (String s : llj) {
                     System.out.println(s + " ");
                 }
-                break;
-            case "alwasl":
                 break;
             default:
                 System.out.println("wrong name,\nwatch out for spelling errors ;)");
