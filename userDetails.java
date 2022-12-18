@@ -89,6 +89,8 @@ class entrydate {
             hour(date,month);
         }
         else
-        System.out.println("\nentering on (" + date + "/" + month + ")\n\t\t at " + hour+"\n");
+            System.out.println("********************************************************************************************************");
+            System.out.println("\nentering on (" + date + "/" + month + ")\n\t\t at " + hour+"\n");
+            System.out.println("********************************************************************************************************");
     }
 }
